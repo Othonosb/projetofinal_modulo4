@@ -1,0 +1,29 @@
+{
+  "name": "projetofinal_modulo4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Othonosb/projetofinal_modulo4.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Othonosb/projetofinal_modulo4/issues"
+  },
+  "homepage": "https://github.com/Othonosb/projetofinal_modulo4#readme",
+  "dependencies": {
+    "express": "^4.18.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+    
+  }
+}
