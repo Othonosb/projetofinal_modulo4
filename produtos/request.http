@@ -1,0 +1,32 @@
+POST http://localhost:4002/produtos
+Content-Type: application/json
+
+{
+    "name":"Feijoada",
+    "price":12
+}
+
+###
+
+GET http://localhost:4002/produtos
+
+
+###
+
+GET http://localhost:4002/produtos/8d4ceea6-5b0e-4979-9eac-12782a59acac
+
+###
+
+PUT  http://localhost:4002/produtos/e07fd5b4-02e1-48cf-956c-2c37d211e40b
+Content-Type: application/json
+
+{
+    "name":"Caneta Azul Bic",
+    "price":3
+}
+
+###
+
+DELETE  http://localhost:4002/produtos/e07fd5b4-02e1-48cf-956c-2c37d211e40b
+
+
