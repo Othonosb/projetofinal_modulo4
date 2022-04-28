@@ -1,12 +1,13 @@
 import { Router } from "express";
 import {
-    createTable,
+    createTableCliente,
     insertCliente,
     updateCliente,
     selectClientes,
     selectCliente,
     deleteCliente
   } from "../controllers/Cliente.js";
+  import { selectFuncionarios, selectFuncionario, insertFuncionario, updateFuncionario, deleteFuncionario } from "../controllers/Funcionario.js";
 
   const router = Router();
   router.get('/', (req, res) => {
@@ -16,16 +17,18 @@ import {
     })
   })
   
+  // Cliente
   router.get('/clientes',selectClientes);
   router.get('/cliente',selectCliente);
   router.post('/cliente',insertCliente);
   router.put('/cliente',updateCliente);
   router.delete('/cliente',deleteCliente);
-  
 
-
-
-
-
+  // Funcionário
+  router.get('/funcionarios', selectFuncionarios);
+  router.get('/funcionario/:id', selectFuncionario);
+  router.post('/funcionario', insertFuncionario);
+  router.put('/funcionario', updateFuncionario);
+  router.delete('/funcionario/:id', deleteFuncionario);
 
   export default router;

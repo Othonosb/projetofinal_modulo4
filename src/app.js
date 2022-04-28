@@ -1,5 +1,6 @@
 import express from "express";
 import { openDb } from "./config/ConfigDb.js";
+import { createTableFuncionario } from "./controllers/Funcionario.js";
 
 
 const app = express();
