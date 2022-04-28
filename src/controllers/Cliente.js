@@ -1,14 +1,14 @@
-import{openDb} from "../config/ConfigDb.js";
+import { openDb } from "../config/ConfigDb.js";
 
-export async function createTable(){
+// Criando a tabela Cliente
+export async function createTableCliente(){
     openDb()
         .then(db => {
         db.exec ('CREATE TABLE IF NOT EXISTS Cliente (id INTEGER PRIMARY KEY, nome TEXT,cpf TEXT,idade INTEGER, email TEXT,endereco TEXT, genero TEXT, telefone INTEGER)')
     })
 }
 
-export async function selectClientes(req, res){
-    
+export async function selectClientes(req, res){    
     openDb().then(db => {
         db.all ('SELECT * FROM Cliente')
        .then(pessoas=>res.json(pessoas))
