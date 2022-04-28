@@ -7,8 +7,26 @@ export async function createTable(){
     })
 }
 
-export async function insertCliente(cliente){
-    console.log(cliente)
+export async function selectClientes(req, res){
+    
+    openDb().then(db => {
+        db.all ('SELECT * FROM Cliente')
+       .then(pessoas=>res.json(pessoas))
+   })
+}
+
+export async function selectCliente(req, res){
+   let id = req.body.id;
+   
+    openDb().then(db => {
+        db.get ('SELECT * FROM Cliente WHERE id=?',
+       [id])
+       .then(cliente=> res.json(cliente));
+   })
+}
+
+export async function insertCliente(req, res){
+    let cliente =req.body
     openDb()
         .then(db => {
         db.run ('INSERT INTO Cliente (nome,cpf,idade,email,endereco,genero,telefone) VALUES (?,?,?,?,?,?,?)',
@@ -22,10 +40,13 @@ export async function insertCliente(cliente){
         cliente.telefone
         ]);
     })
+    res.json({
+        "StatusCode" : 200
+    })
 }
 
-export async function updateCliente(cliente){
-    
+export async function updateCliente(req, res){
+    let cliente =req.body
     openDb()
         .then(db => {
         db.run ('UPDATE Cliente SET nome=?,cpf=?,idade=?,email=?,endereco=?,genero=?,telefone=? WHERE id=?',
@@ -40,30 +61,21 @@ export async function updateCliente(cliente){
         cliente.id
         ]);
     })
-}
-
-export async function selectClientes(cliente){
-    
-    return openDb().then(db => {
-        return db.all ('SELECT * FROM Cliente')
-        .then(res=>res)
+    res.json({
+        "StatusCode" : 200
     })
 }
 
-export async function selectCliente(id){
-    
-    return openDb().then(db => {
-        return db.get ('SELECT * FROM Cliente WHERE id=?',
+
+
+export async function deleteCliente(req, res){
+    let id = req.body.id;
+     openDb().then(db => {
+        db.get ('DELETE FROM Cliente WHERE id=?',
         [id])
         .then(res=>res)
     })
-}
-
-export async function deleteCliente(id){
-    
-    return openDb().then(db => {
-        return db.get ('DELETE FROM Cliente WHERE id=?',
-        [id])
-        .then(res=>res)
+    res.json({
+        "StatusCode" : 200
     })
 }
