@@ -19,10 +19,10 @@ import {
   
   // Cliente
   router.get('/clientes',selectClientes);
-  router.get('/cliente',selectCliente);
+  router.get('/cliente/:id',selectCliente);
   router.post('/cliente',insertCliente);
   router.put('/cliente',updateCliente);
-  router.delete('/cliente',deleteCliente);
+  router.delete('/cliente/:id',deleteCliente);
 
   // Funcionário
   router.get('/funcionarios', selectFuncionarios);

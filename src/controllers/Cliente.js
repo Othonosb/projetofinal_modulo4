@@ -11,18 +11,16 @@ export async function createTableCliente(){
 export async function selectClientes(req, res){    
     openDb().then(db => {
         db.all ('SELECT * FROM Cliente')
-       .then(pessoas=>res.json(pessoas))
+       .then(clientes=>res.json(clientes))
    })
 }
 
 export async function selectCliente(req, res){
-   let id = req.body.id;
-   
-    openDb().then(db => {
-        db.get ('SELECT * FROM Cliente WHERE id=?',
-       [id])
-       .then(cliente=> res.json(cliente));
-   })
+    let id = req.params.id;
+
+    openDb()
+        .then(db => db.get(`SELECT * FROM Cliente WHERE ID = ?`, [id]))
+        .then(clientes => res.json(clientes))
 }
 
 export async function insertCliente(req, res){
@@ -69,13 +67,12 @@ export async function updateCliente(req, res){
 
 
 export async function deleteCliente(req, res){
-    let id = req.body.id;
-     openDb().then(db => {
-        db.get ('DELETE FROM Cliente WHERE id=?',
-        [id])
-        .then(res=>res)
-    })
+    let id = req.params.id;
+    
+    openDb()
+        .then(db => db.get(`DELETE FROM Cliente WHERE ID = ?`, [id]))
+       
     res.json({
-        "StatusCode" : 200
-    })
+        "statusCode": 200
+    });
 }
