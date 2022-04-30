@@ -1,13 +1,15 @@
 import express from "express";
+import { openDb } from "./config/ConfigDb.js";
+import { createTableFuncionario } from "./controllers/Funcionario.js";
+import cors from "cors";
+
 
 const app = express();
+app.use(express.json());
+app.use(cors());
+
+import router from "./routers/routes.js"
+app.use(router);
 
 
-app.get('/', (req, res) => {
-    res.status(200).send('Projeto M4');
-  }) 
-
-
-
-
-  export default app;
+export default app;
