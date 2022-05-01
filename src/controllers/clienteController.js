@@ -1,6 +1,6 @@
 import db from '../data/ConfigDB.js';
 import Cliente from '../models/Cliente.js';
-import ClienteDAO from '../DAO/ClienteDAO.js';
+import ClienteDAO from '../DAO/clienteDAO.js';
 import res from 'express/lib/response.js';
 
 const clienteDAO = new ClienteDAO(db);
