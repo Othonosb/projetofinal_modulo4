@@ -1,5 +1,4 @@
 import express from "express";
-import { openDb } from "./config/ConfigDb.js";
 import cors from "cors";
 import routes from './routers/index.js';
 
