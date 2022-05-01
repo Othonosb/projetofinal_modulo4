@@ -8,7 +8,7 @@ import {
     deleteCliente
   } from "../controllers/Cliente.js";
   import { selectFuncionarios, selectFuncionario, insertFuncionario, updateFuncionario, deleteFuncionario } from "../controllers/Funcionario.js";
-  import { selectHardwares, selectHardware, insertHardware, updateHardware, deleteHardware } from "../controllers/hardware.js";
+  import { selectHardwares, selectHardware, insertHardware, updateHardware, deleteHardware } from "../controllers/Hardware.js";
 
   const router = Router();
   router.get('/', (req, res) => {
