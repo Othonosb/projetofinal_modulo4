@@ -72,6 +72,6 @@ export async function deleteHardware(req, res) {
     openDb()
         .then(db => db.get(`DELETE FROM Hardware WHERE ID = ?`, [id]))
 
-    res.status(200).json("Produtos deletado com sucesso!")
+    res.status(200).json("Produto deletado com sucesso!")
     
 }
