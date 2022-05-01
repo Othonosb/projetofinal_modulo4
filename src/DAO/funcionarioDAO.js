@@ -1,4 +1,4 @@
-export class FuncionarioDAO {
+export default class FuncionarioDAO {
 
     constructor(db) {
         this.db = db;

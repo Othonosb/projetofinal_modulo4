@@ -1,5 +1,6 @@
 import db from '../data/ConfigDB.js';
-import {FuncionarioDAO} from '../DAO/funcionario-dao.js';
+import Funcionario from '../models/Funcionario.js';
+import FuncionarioDAO from '../DAO/funcionarioDAO.js';
 import res from 'express/lib/response.js';
 
 const funcionarioDAO = new FuncionarioDAO(db);
@@ -27,7 +28,8 @@ export default class FuncionarioController {
     }
 
     static async insertFuncionario(req, res) {
-        const funcionario = req.body;
+        const body = req.body;
+        const funcionario = new Funcionario(body.nome, body.cpf, body.idade, body.cargo, body.telefone);
 
         try {
             let result = await funcionarioDAO.insertFuncionario(funcionario);
