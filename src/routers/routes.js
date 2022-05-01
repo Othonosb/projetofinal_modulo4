@@ -7,7 +7,7 @@ import {
     selectCliente,
     deleteCliente
   } from "../controllers/Cliente.js";
-  import { selectFuncionarios, selectFuncionario, insertFuncionario, updateFuncionario, deleteFuncionario } from "../controllers/Funcionario.js";
+  import FuncionarioController from "../controllers/Funcionario.js";
 
   const router = Router();
   router.get('/', (req, res) => {
@@ -25,10 +25,10 @@ import {
   router.delete('/cliente/:id',deleteCliente);
 
   // Funcionário
-  router.get('/funcionarios', selectFuncionarios);
-  router.get('/funcionario/:id', selectFuncionario);
-  router.post('/funcionario', insertFuncionario);
-  router.put('/funcionario', updateFuncionario);
-  router.delete('/funcionario/:id', deleteFuncionario);
+  router.get('/funcionarios', FuncionarioController.selectFuncionarios);
+  router.get('/funcionario/:id', FuncionarioController.selectFuncionario);
+  router.post('/funcionario', FuncionarioController.insertFuncionario);
+  router.put('/funcionario', FuncionarioController.updateFuncionario);
+  router.delete('/funcionario/:id', FuncionarioController.deleteFuncionario);
 
   export default router;
