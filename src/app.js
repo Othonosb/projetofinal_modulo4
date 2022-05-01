@@ -8,5 +8,4 @@ app.use(cors());
 
 routes(app);
 
-
 export default app;
