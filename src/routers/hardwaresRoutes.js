@@ -1,5 +1,5 @@
 import express from 'express';
-// import HardwareController from '../controllers/hardwareController.js';
+import HardwareController from '../controllers/hardwareController.js';
 
 const router = express.Router();
 

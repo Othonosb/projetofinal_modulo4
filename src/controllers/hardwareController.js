@@ -1,26 +1,31 @@
-import { openDb } from "../config/ConfigDb.js";
+import db from '../data/ConfigDB.js';
+import Hardware from '../models/Hardware';
+import HardwareDAO from '../DAO/hardwareDAO';
+import res from 'express/lib/response.js';
 
-//Criando a tabela dos Hardware
+const hardwareDAO = new HardwareDAO(db);
 
-export async function createTableHardware() {
-    openDb()
-        .then(db => {
-            db.exec('CREATE TABLE IF NOT EXISTS Hardware (id INTEGER PRIMARY KEY, nome TEXT, marca TEXT, preço INTEGER, tipo TEXT)')
-        })
-}
+export default class HardwareController{
 
-//Selecionar todos cadastros
+    //Criando a tabela dos Hardware
+    static async createTableHardware() {
+        openDb()
+            .then(db => {
+                db.exec('CREATE TABLE IF NOT EXISTS Hardware (id INTEGER PRIMARY KEY, nome TEXT, marca TEXT, preço INTEGER, tipo TEXT)')
+            })
+    }
+    //Selecionar todos cadastros
 
-export async function selectHardwares(req, res) {
+    static async  selectHardwares(req, res) {
     openDb().then(db => {
         db.all('SELECT * FROM Hardware')
             .then(hardwares => res.json(hardwares))
     })
 }
 
-//Seleção por ID do Produtos-Hardwares
+    //Seleção por ID do Produtos-Hardwares
 
-export async function selectHardware(req, res) {
+    static async selectHardware(req, res) {
     let id = req.params.id;
 
     openDb()
@@ -28,9 +33,9 @@ export async function selectHardware(req, res) {
         .then(hardwares => res.json(hardwares))
 }
 
-//Inserir novos Hardwares
+    //Inserir novos Hardwares
 
-export async function insertHardware(req, res) {
+    static async  insertHardware(req, res) {
     let Hardware = req.body
     openDb()
         .then(db => {
@@ -47,7 +52,7 @@ export async function insertHardware(req, res) {
 
 //Implementação do UPDATE dos Produtos-Hardwares
 
-export async function updateHardware(req, res) {
+    static  async  updateHardware(req, res) {
     let Hardware = req.body
     openDb()
         .then(db => {
@@ -66,7 +71,7 @@ export async function updateHardware(req, res) {
 
 //Implementação do DELETE dos Produtos-Hardwares
 
-export async function deleteHardware(req, res) {
+    static async deleteHardware(req, res) {
     let id = req.params.id;
 
     openDb()
@@ -74,4 +79,5 @@ export async function deleteHardware(req, res) {
 
     res.status(200).json("Produto deletado com sucesso!")
     
+}
 }
