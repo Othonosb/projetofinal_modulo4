@@ -35,7 +35,12 @@ function createTableCliente() {
     })
 }
 
-db.serialize( ()=> {
+function createTableHardware() {
+    db.run('CREATE TABLE IF NOT EXISTS Hardware (id INTEGER PRIMARY KEY, nome TEXT, marca TEXT, preço INTEGER, tipo TEXT)')
+}
+
+db.serialize(()=> {
     createTableFuncionario();
     createTableCliente();
+    createTableHardware();
 });
