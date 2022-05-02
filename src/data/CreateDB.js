@@ -35,6 +35,12 @@ function createTableCliente() {
     })
 }
 
+const FORNECEDOR_SCHEMA = `CREATE TABLE IF NOT EXISTS Fornecedor
+    ( id INTEGER PRIMARY KEY,
+    nome TEXT,
+    cnpj TEXT,
+    telefone INTEGER )`;
+
 function createTableHardware() {
     db.run('CREATE TABLE IF NOT EXISTS Hardware (id INTEGER PRIMARY KEY, nome TEXT, marca TEXT, preço INTEGER, tipo TEXT)')
 }
