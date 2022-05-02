@@ -49,6 +49,8 @@ Por fim, para executar o projeto, o comando `node server.js` deve ser inserido n
     - **Remova uma instância específica através de seu id**
         - `'/cliente'` || `'/funcionario'` || `'/fornecedor'` || `'/'` || `'/'` + /{insira aqui a id desejada}
 
+*A operação GET pode ser acessada através de seu navegador de preferência, enquanto que para a utilização das demais é recomendado fazer as requisições por meio de API clients como [Postman](https://www.postman.com/) ou [Insomnia](https://insomnia.rest/download).*
+
 #### **Deploy**
 
 ---
