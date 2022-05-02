@@ -36,18 +36,18 @@ Por fim, para executar o projeto, o comando `node server.js` deve ser inserido n
 
 - **GET**
     - **Consulte todas as instâncias da entidade**
-        - `'/clientes'` / `'/funcionarios'` / `'/fornecedores'` / `'/'` / `'/'`
+        - `'/clientes'` || `'/funcionarios'` || `'/fornecedores'` || `'/'` || `'/'`
     - **Consulte uma instância específica através de seu id**
-        - `'/cliente'` / `'/funcionario'` / `'/fornecedor'` / `'/'` / `'/'` + /{insira aqui a id desejada}
+        - `'/cliente'` || `'/funcionario'` || `'/fornecedor'` || `'/'` || `'/'` + /{insira aqui a id desejada}
 - **POST**
     - **Insira uma instância na entidade**
-        - `'/cliente'` / `'/funcionario'` / `'/fornecedor'` / `'/'` / `'/'`
+        - `'/cliente'` || `'/funcionario'` || `'/fornecedor'` || `'/'` || `'/'`
 - **PUT**
     - **Atualize uma instância já existente**
-        - `'/cliente'` / `'/funcionario'` / `'/fornecedor'` / `'/'` / `'/'`
+        - `'/cliente'` || `'/funcionario'` || `'/fornecedor'` || `'/'` || `'/'`
 - **DELETE**
     - **Remova uma instância específica através de seu id**
-        - `'/cliente'` / `'/funcionario'` / `'/fornecedor'` / `'/'` / `'/'` + /{insira aqui a id desejada}
+        - `'/cliente'` || `'/funcionario'` || `'/fornecedor'` || `'/'` || `'/'` + /{insira aqui a id desejada}
 
 #### **Deploy**
 
