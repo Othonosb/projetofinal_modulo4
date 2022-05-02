@@ -1,6 +1,6 @@
 import db from '../data/ConfigDB.js';
 import Funcionario from '../models/Funcionario.js';
-import FuncionarioDAO from '../DAO/funcionarioDAO.js';
+import FuncionarioDAO from '../DAO/FuncionarioDAO.js';
 import res from 'express/lib/response.js';
 
 const funcionarioDAO = new FuncionarioDAO(db);

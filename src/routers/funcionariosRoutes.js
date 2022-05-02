@@ -1,5 +1,5 @@
 import express from 'express';
-import FuncionarioController from '../controllers/funcionarioController.js';
+import FuncionarioController from '../controllers/FuncionarioController.js';
 
 const router = express.Router();
 
