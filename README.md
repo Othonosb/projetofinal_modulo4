@@ -1,20 +1,66 @@
-# projetofinal_modulo4
+# Projeto final: Módulo 4 <br> REST API — Loja de informática 💻
 
-Utilizar o padrão MVC; ✅
-Utilizar os verbos HTTP seguindo o padrão REST; ✅
-Implementar todas as operações de CRUD; ✅
-Utilizar o padrão de projeto (design pattern) DAO para abstração de transações no banco, com
-Promises; ✅
-Utilizar o README.md do repositório para documentação, contendo informações como:
-Como instalar as dependências do projeto;
-Como executar o projeto;
-Quais são as rotas possíveis;
-Quaisquer outros pontos que você achar necessários;
-Utilização de async/await para operações no banco (DAO)
-Ter o código fonte hospedado em um repositório no Github. ✅
-As rotas a serem desenvolvidas para as entidades são:
-Listagem de todos os registros ✅
-Listagem de um único registro com base em um parâmetro de rota ✅
-Inserção de um registro ✅
-Modificação de um registro ✅
-Deleção de um registro ✅
+#### **Sobre o projeto**
+
+---
+
+* Utilização de padrão **MVC** e design pattern **DAO**
+* Arquitetura **REST**
+* Operações **CRUD**
+* Feito em Node.js: **Express, Nodemon, SQLite**
+
+#### **Instruções de instalação**
+
+---
+
+*Para o uso da aplicação, é requerido em sua máquina a presença de [Git](https://git-scm.com/downloads) e [Node.js](https://nodejs.org/en/download/ "Versão utilizada no projeto: 16.14.2").*<br>
+
+#### Protocolo SSH:
+
+> `git clone git@github.com:Othonosb/projetofinal_modulo4.git`
+
+#### Protocolo HTTPS:
+
+> `https://github.com/Othonosb/projetofinal_modulo4.git`
+
+Para a instalação das **dependências** do projeto, execute o comando `npm install` em seu terminal, dentro da pasta onde os arquivos foram salvos. Ao executar este comando, será instalada toda a estrutura necessária e descrita no arquivo `package.json` para o pleno funcionamento do software.<br>
+
+Para criar o banco de dados e preenchê-lo com dados predefinidos, execute em seu terminal o comando `node ./src/data/CreateDB.js`.<br>
+
+Por fim, para executar o projeto, o comando `node server.js` deve ser inserido no terminal.<br>
+
+#### **Rotas**
+---
+
+**As entidades disponíveis no banco de dados são: cliente, funcionário, fornecedor, hardware e software.**
+
+- **GET**
+    - **Consulte todas as instâncias da entidade**
+        - `'/clientes'` / `'/funcionarios'` / `'/fornecedores'` / `'/'` / `'/'`
+    - **Consulte uma instância específica através de seu id**
+        - `'/cliente'` / `'/funcionario'` / `'/fornecedor'` / `'/'` / `'/'` + /{insira aqui a id desejada}
+- **POST**
+    - **Insira uma instância na entidade**
+        - `'/cliente'` / `'/funcionario'` / `'/fornecedor'` / `'/'` / `'/'`
+- **PUT**
+    - **Atualize uma instância já existente**
+        - `'/cliente'` / `'/funcionario'` / `'/fornecedor'` / `'/'` / `'/'`
+- **DELETE**
+    - **Remova uma instância específica através de seu id**
+        - `'/cliente'` / `'/funcionario'` / `'/fornecedor'` / `'/'` / `'/'` + /{insira aqui a id desejada}
+
+#### **Deploy**
+
+---
+
+Para interagir com a API sem a necessidade de instalação local, o endereço https://projeto-final-m4.herokuapp.com/ pode ser acessado, seguindo as mesmas instruções de rota sinalizadas acima.
+
+#### **Participantes**
+
+---
+
+* [Douglas Andrade](https://github.com/dougandra)
+* [Giovanni Clayton](https://github.com/Gclayton0207)
+* [Maria Rita Santana](https://github.com/55021)
+* [Othon Botelho](https://github.com/Othonosb)
+* [Victor Barros](https://github.com/victorb26)
