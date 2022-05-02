@@ -4,8 +4,8 @@ export default class ClienteDAO {
         this.db = db;
     }
 
-    selectClientes() {
-        return new Promise((resolve, reject) => {
+    async selectClientes() {
+        return await new Promise((resolve, reject) => {
             this.db.all(`SELECT * FROM Cliente`, (error, result) => {
                 if (error) {
                     return reject(error);
@@ -53,7 +53,7 @@ export default class ClienteDAO {
     }
 
     async deleteCliente(id) {
-        return new Promise((resolve, reject) => {
+        return await new Promise((resolve, reject) => {
             this.db.run(`DELETE FROM Cliente WHERE ID = ?`, [id], error => {
                 if (error) {
                     reject(error);
