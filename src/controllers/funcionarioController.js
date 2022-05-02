@@ -5,7 +5,7 @@ import res from 'express/lib/response.js';
 
 const funcionarioDAO = new FuncionarioDAO(db);
 
-export default class FuncionarioController {
+export class FuncionarioController {
     
     static async selectFuncionarios(req, res) {
         try {
