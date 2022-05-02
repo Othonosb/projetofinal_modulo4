@@ -1,5 +1,5 @@
 import sqlite3 from "sqlite3";
-const db = new sqlite3.Database('./src/data/database.db'); // ./src/data/database.db ou ./database.db?
+const db = new sqlite3.Database('./src/data/database.db');
 
 //Processamento de sinal
 process.on('SIGINT', () =>
