@@ -1,7 +1,7 @@
 import express from 'express';
-import FuncionarioController from '../controllers/FuncionaaaarioController.js';
+import FuncionarioController from '../controllers/FuncionarioController.js'
 
-const router = express.Router();aaaa
+const router = express.Router();
 
 router.get('/funcionarios', FuncionarioController.selectFuncionarios);
 router.get('/funcionario/:id', FuncionarioController.selectFuncionario);
