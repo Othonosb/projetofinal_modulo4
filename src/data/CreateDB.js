@@ -1,3 +1,4 @@
+import { Database } from "sqlite";
 import sqlite3 from "sqlite3";
 const db = new sqlite3.Database('./src/data/database.db');
 
@@ -24,6 +25,13 @@ const FORNECEDOR_SCHEMA = `CREATE TABLE IF NOT EXISTS Fornecedor
     nome TEXT,
     cnpj TEXT,
     telefone INTEGER )`;
+
+const SOFTWARE_SCHEMA = `CREATE TABLE IF NOT EXISTS Software
+    (id INTEGER PRIMARY KEY, 
+    nome TEXT, 
+    marca TEXT, 
+    preço INTEGER, 
+    tipo TEXT )`;
 
 function createTableFuncionario() {
         db.run(FUNCIONARIOS_SCHEMA, error => {
@@ -53,9 +61,20 @@ function createTableFornecedor() {
     })
 }
 
+function createTableSoftware() {
+    db.run(SOFTWARE_SCHEMA, error => {
+        if (error) {
+            console.log(error);                
+        }
+    })
+}
+
 db.serialize(()=> {
     createTableFuncionario();
     createTableCliente();
     createTableHardware();
     createTableFornecedor();
+    createTableSoftware();
 });
+
+
