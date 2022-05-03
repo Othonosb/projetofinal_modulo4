@@ -1,3 +1,4 @@
+import { Database } from "sqlite";
 import sqlite3 from "sqlite3";
 const db = new sqlite3.Database('./src/data/database.db');
 
@@ -75,3 +76,5 @@ db.serialize(()=> {
     createTableFornecedor();
     createTableSoftware();
 });
+
+
