@@ -50,14 +50,15 @@ export default class HardwareController {
         }
     }
 
-    static async deleteHardware(req, res) {
-        const id = req.params.id;
 
-        try {
-            let result = await hardwareDAO.deleteHardware(id);
-            res.status(200).send(result);
-        } catch (error) {
-            res.status(400).send(error.message);
-        }
+    static async deleteHardware(req, res) {
+    const id = req.params.id;
+
+    try {
+        let result = await hardwareDAO.deleteHardware(id);
+        res.status(200).send(result);
+    } catch (error) {
+        res.status(400).send(error.message);
     }
-}
+    }
+    }
