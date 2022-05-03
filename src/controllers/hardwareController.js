@@ -1,6 +1,6 @@
 import db from '../data/ConfigDB.js';
-import Hardware from '../models/Hardware';
-import HardwareDAO from '../DAO/hardwareDAO';
+import Hardware from '../models/Hardware.js';
+import HardwareDAO from '../DAO/hardwareDAO.js';
 import res from 'express/lib/response.js';
 
 const hardwareDAO = new HardwareDAO(db);
