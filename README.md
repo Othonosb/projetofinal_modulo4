@@ -36,18 +36,18 @@ Por fim, para executar o projeto, o comando `node server.js` deve ser inserido n
 
 - **GET**
     - **Consulte todas as instâncias da entidade**
-        - `'/clientes'` || `'/funcionarios'` || `'/fornecedores'` || `'/'` || `'/'`
+        - `'/clientes'` || `'/funcionarios'` || `'/fornecedores'` || `'/hardwares'` || `'/softwares'`
     - **Consulte uma instância específica através de seu id**
-        - `'/cliente'` || `'/funcionario'` || `'/fornecedor'` || `'/'` || `'/'` + /{insira aqui a id desejada}
+        - `'/cliente'` || `'/funcionario'` || `'/fornecedor'` || `'/hardware'` || `'/software'` + /{insira aqui a id desejada}
 - **POST**
     - **Insira uma instância na entidade**
-        - `'/cliente'` || `'/funcionario'` || `'/fornecedor'` || `'/'` || `'/'`
+        - `'/cliente'` || `'/funcionario'` || `'/fornecedor'` || `'/hardware'` || `'/software'`
 - **PUT**
     - **Atualize uma instância já existente**
-        - `'/cliente'` || `'/funcionario'` || `'/fornecedor'` || `'/'` || `'/'`
+        - `'/cliente'` || `'/funcionario'` || `'/fornecedor'` || `'/hardware'` || `'/software'`
 - **DELETE**
     - **Remova uma instância específica através de seu id**
-        - `'/cliente'` || `'/funcionario'` || `'/fornecedor'` || `'/'` || `'/'` + /{insira aqui a id desejada}
+        - `'/cliente'` || `'/funcionario'` || `'/fornecedor'` || `'/hardware'` || `'/software'` + /{insira aqui a id desejada}
 
 *A operação GET pode ser acessada através de seu navegador de preferência, enquanto que para a utilização das demais é recomendado fazer as requisições por meio de API clients como [Postman](https://www.postman.com/) ou [Insomnia](https://insomnia.rest/download).*
 
