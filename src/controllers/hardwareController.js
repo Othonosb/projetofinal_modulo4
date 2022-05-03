@@ -23,7 +23,7 @@ export default class HardwareController {
     // })
     // }
 
-    static async selectClientes(req, res) {
+    static async selectHardwares(req, res) {
         try {
             let hardwares = await hardwareDAO.selectHardware();
             res.json(hardwares);
