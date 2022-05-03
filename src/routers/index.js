@@ -3,6 +3,7 @@ import funcionarios from './funcionariosRoutes.js';
 import clientes from './clientesRoutes.js';
 import fornecedores from './fornecedoresRoutes.js';
 import softwares from './softwaresRoutes.js';
+import hardwares from './hardwaresRoutes.js';
 
 const routes = app => {
     app.route('/').get((req, res) => {
@@ -18,6 +19,7 @@ const routes = app => {
         clientes,
         fornecedores,
         softwares,
+        hardwares
     )
 }
 

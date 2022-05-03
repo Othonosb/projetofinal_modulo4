@@ -20,7 +20,7 @@ export default class SoftwareController {
         const id = req.params.id;
 
         try {
-            let Software = await softwareDAO.selectSoftware(id);
+            let software = await softwareDAO.selectSoftware(id);
             res.status(200).json(software);
         } catch (error) {
             res.status(400).send(error.message);
