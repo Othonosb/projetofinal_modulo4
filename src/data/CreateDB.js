@@ -25,6 +25,13 @@ const FORNECEDOR_SCHEMA = `CREATE TABLE IF NOT EXISTS Fornecedor
     cnpj TEXT,
     telefone INTEGER )`;
 
+const HARDWARE_SCHEMA = `CREATE TABLE IF NOT EXISTS Hardware
+    ( id INTEGER PRIMARY KEY,
+    nome TEXT, 
+    marca TEXT, 
+    preço INTEGER, 
+    tipo TEXT )`;
+
 function createTableFuncionario() {
         db.run(FUNCIONARIOS_SCHEMA, error => {
             if (error) {
@@ -41,14 +48,22 @@ function createTableCliente() {
     })
 }
 
-function createTableHardware() {
-    db.run('CREATE TABLE IF NOT EXISTS Hardware (id INTEGER PRIMARY KEY, nome TEXT, marca TEXT, preço INTEGER, tipo TEXT)')
-}
+// function createTableHardware() {
+    // db.run('CREATE TABLE IF NOT EXISTS Hardware (id INTEGER PRIMARY KEY, nome TEXT, marca TEXT, preço INTEGER, tipo TEXT)')
+// }
 
 function createTableFornecedor() {
     db.run(FORNECEDOR_SCHEMA, error => {
         if (error) {
             console.log(error);
+        }
+    })
+}
+
+function createTableHardware() {
+    db.run(HARDWARE_SCHEMA, error => {
+        if (error) {
+            console.log(error);                
         }
     })
 }
@@ -59,3 +74,4 @@ db.serialize(()=> {
     createTableHardware();
     createTableFornecedor();
 });
+
