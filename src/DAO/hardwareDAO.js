@@ -4,8 +4,8 @@ export default class HardwareDAO {
         this.db = db;
     }
 
-    selectHardwares() {
-        return new Promise((resolve, reject) => {
+    async selectHardwares() {
+        return await new Promise((resolve, reject) => {
             this.db.all(`SELECT * FROM Hardware`, (error, result) => {
                 if (error) {
                     return reject(error);

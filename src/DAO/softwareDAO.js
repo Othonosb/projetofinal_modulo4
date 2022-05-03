@@ -4,8 +4,8 @@ export default class SoftwareDAO {
         this.db = db;
     }
 
-    selectSoftwares() {
-        return new Promise((resolve, reject) => {
+    async selectSoftwares() {
+        return await new Promise((resolve, reject) => {
             this.db.all(`SELECT * FROM Software`, (error, result) => {
                 if (error) {
                     return reject(error);

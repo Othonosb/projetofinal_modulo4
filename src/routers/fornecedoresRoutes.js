@@ -3,7 +3,7 @@ import FornecedorController from '../controllers/fornecedorController.js';
 
 const router = express.Router();
 
-router.get('/fornecedor', FornecedorController.selectFornecedores);
+router.get('/fornecedores', FornecedorController.selectFornecedores);
 router.get('/fornecedor/:id', FornecedorController.selectFornecedor);
 router.post('/fornecedor', FornecedorController.insertFornecedor);
 router.put('/fornecedor', FornecedorController.updateFornecedor);
