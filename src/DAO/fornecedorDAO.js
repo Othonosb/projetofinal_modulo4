@@ -4,7 +4,7 @@ export default class FornecedorDAO {
         this.db = db;
     }
 
-    selectFornecedor() {
+    async selectFornecedores() {
         return new Promise((resolve, reject) => {
             this.db.all(`SELECT * FROM Fornecedor`, (error, result) => {
                 if (error) {
