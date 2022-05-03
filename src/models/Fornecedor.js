@@ -2,7 +2,7 @@ export default class Fornecedor {
 
     constructor(nome, cnpj,telefone) {
         this.nome = nome;
-        this.cpf = cnpj;
+        this.cnpj = cnpj;
         this.telefone = this.validaTelefone(telefone);
     }
 
