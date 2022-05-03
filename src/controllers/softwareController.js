@@ -7,7 +7,7 @@ const softwareDAO = new SoftwareDAO(db);
 
 export default class SoftwareController {
     
-    static async selectSoftware(req, res) {
+    static async selectSoftwares(req, res) {
         try {
             let softwares = await softwareDAO.selectSoftwares();
             res.json(softwares);
