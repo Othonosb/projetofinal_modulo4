@@ -7,14 +7,6 @@ export default class Cliente {
         this.email = email;
         this.endereco = endereco;
         this.genero = genero;
-        this.telefone = this.validaTelefone(telefone);
-    }
-    validaTelefone(telefone) {
-        let string = telefone.toString();
-        if (string.length != 11) {
-            throw new Error("Digite um número de telefone válido, com DDD.");
-        } else {
-            return telefone;
-        }
+        this.telefone = telefone;
     }
 }
