@@ -26,19 +26,11 @@ const FORNECEDOR_SCHEMA = `CREATE TABLE IF NOT EXISTS Fornecedor
     telefone INTEGER )`;
 
 const HARDWARE_SCHEMA = `CREATE TABLE IF NOT EXISTS Hardware
-<<<<<<< HEAD
     (id INTEGER PRIMARY KEY,
     nome TEXT,
     marca TEXT,
     preço INTEGER,
     tipo TEXT)`;
-=======
-    (id INTEGER PRIMARY KEY, 
-    nome TEXT, 
-    marca TEXT, 
-    preço INTEGER, 
-    tipo TEXT )`;
->>>>>>> produtos_othon
 
 function createTableFuncionario() {
         db.run(FUNCIONARIOS_SCHEMA, error => {
@@ -63,9 +55,6 @@ function createTableHardware() {
         }
     })
 }
-// function createTableHardware() {
-//     db.run('CREATE TABLE IF NOT EXISTS Hardware (id INTEGER PRIMARY KEY, nome TEXT, marca TEXT, preço INTEGER, tipo TEXT)')
-// }
 
 function createTableFornecedor() {
     db.run(FORNECEDOR_SCHEMA, error => {
