@@ -9,7 +9,7 @@ const routes = app => {
     app.route('/').get((req, res) => {
         res.json({
             "statusCode": 200,
-            "message": "API rodando!"
+            "message": "Bem vindo à G1 Info Store!"
         });
     })
 
